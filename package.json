@@ -1,0 +1,29 @@
+{
+  "name": "sage",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:backend": "set \"SAGE_LISTEN=1\" && node backend/src/server.js",
+    "build": "npm --prefix frontend run build",
+    "start": "node backend/src/server.js",
+    "preview": "npm --prefix frontend run preview",
+    "clean": "rm -rf frontend/dist server.js",
+    "test:handler": "node scripts/smoke-test-handler.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "firebase-admin": "^14.3.0",
+    "serverless-http": "^3.2.0"
+  },
+  "overrides": {
+    "jose": "5.9.6"
+  }
+}
